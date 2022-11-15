@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- 文字コードはutf-8 -->
+    <meta charset="UTF-8">
+    <!-- 表示する画面のサイズ -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>練習問題</title>
+
+    <!-- ブラウザのタブのアイコンを指定 -->
+    <link href="../_common/images/favicon.ico" rel="shortcut icon">
+    <!-- Googleから提供されているフォントを使用 -->
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+    <!-- 共通のcssを読み込む -->
+    <link href="../_common/css/style.css" rel="stylesheet">
+
+    <!-- 講師用のcssを読み込む(文字サイズ大きく) -->
+    <link rel="stylesheet" href="../koushi.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>練習問題(ex3-4)</h1>
+            <h2>ダイアログで3つ数値を入力し、最大値・最小値を表示。
+                <br>
+                その時、入力された値が数値でない場合
+                <br>
+                「数字を入力してください。」と表示。
+            </h2>
+        </div><!-- /.container -->
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+                <!-- 必要であればここにHTMLを追記 -->
+                <p id="output"></p>
+            </section>
+        </div><!-- /.container -->
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Lan Trong Hoang</p>
+        </div><!-- /.container -->
+    </footer>
+
+    <!-- JavaScriptのファイルを読み込む -->
+    <script src="script.js"></script>
+    <!-- <script>
+        'use strict';
+
+        const output = document.getElementById('output');
+
+        let count = 0;
+        const count_max = 3;
+
+        let values = [];
+
+        callDialogue();
+
+        function callDialogue() {
+            // p076より
+            const input = window.prompt("数字を入力してね。")
+
+            if (count === 0) output.innerHTML = "";
+
+            count++;
+
+            values.push(input);
+
+            if (isNaN(input)) {
+                // "https://qiita.com/tomokichi_ruby/items/3640f0bc64ad6c676206"より 
+                output.innerHTML = output.innerHTML + count + "つ目は数字ではありませんでした。" + "<br>";
+                output.innerHTML = output.innerHTML + "数字を入力してください" + "<br>";
+            }
+
+            if(count < count_max) callDialogue();
+
+            getResult();
+
+        }
+
+        function getResult() {
+            if (count >= count_max) {
+                const max = Math.max(...values);
+                const min = Math.min(...values);
+
+                output.innerHTML = output.innerHTML + "最大値は" + max + "です。" + "<br>";
+                output.innerHTML = output.innerHTML + "最小値は" + min + "です。" + "<br>";
+
+                initialize();
+            }
+        }
+
+        function initialize() {
+            // 初期化
+            count = 0;
+            values = [];
+        }
+
+    </script> -->
+</body>
+
+</html>
